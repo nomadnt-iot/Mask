@@ -44,5 +44,9 @@ const unsigned char animations[LED_COUNT + 1] = {
  * update leds
  */
 void updateDots(unsigned char value);
+
+#if defined(MAX4466)
 void amplitude();
+#else
 void peak();
+#endif
